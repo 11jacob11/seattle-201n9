@@ -31,10 +31,11 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // TODO: Write your code here
-function multiply(a,b){ //eslint-disable-line
-  var product = a * b;
-  var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
-  return [product, message]
+
+function multiply(a,b) { //eslint-disable-line
+  var theProduct = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + theProduct + '.';
+  return [theProduct, message];
 }
 
 // TODO: Here is the test for multiply(); uncomment it to run it
@@ -55,9 +56,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var subSum = sum(a,b)[0];
+  var q3Sum = sum(subSum,c);
+  var subMult = multiply(a,b)[0];
+  var q3Mult = multiply(subMult,c);
+  var messageSum = a + ' and ' + b + ' and ' + c + ' sum to ' + q3Sum[0] + '.';
+  var messageMult = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + q3Mult[0] + '.';
+  return[q3Sum[0],q3Mult[0],messageSum,messageMult];
 }
-
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
